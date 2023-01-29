@@ -9,6 +9,8 @@ const AboutPagePage = () => {
   return (
     <>
       <div className="bg-white_A700 font-arial h-[1024px] mx-[auto] relative w-[100%]">
+      <div className="bg-deep_purple_A100 flex flex-col items-end justify-start p-[32px] sm:px-[20px] w-[100%]">
+
         <Img
           src="images/img_headersectiondesign.png"
           className="h-[1024px] m-[auto] object-cover w-[auto]"
@@ -54,6 +56,7 @@ const AboutPagePage = () => {
             className="h-[325px] sm:h-[auto] md:ml-[0] sm:ml-[0] ml-[359px] object-cover md:w-[100%] sm:w-[100%] w-[30%]"
             alt="imageSix"
           />
+        </div>
         </div>
       </div>
     </>
