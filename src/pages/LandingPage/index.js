@@ -12,64 +12,68 @@ const LandingPagePage = () => {
 
   function votedYes() {
   
-    const form = new FormData();
-    form.append('chain', 'polygon');
-    form.append('data', '[{"trait_type":"url","value":"https://www.amazon.com/All-new-Fire-HD-8-tablet/dp/B099Z8HLHT?ref_=Oct_DLandingS_D_4140c100_60"},{"trait_type":"name","value":"All-new Amazon Fire HD 8 tablet, 8” HD Display, 32 GB, 30% faster processor, designed for portable entertainment, (2022 release), Black"}, {"trait_type":"asin","value":"B09BG6BRQG"}]');
-    form.append('imageUrl', 'https://m.media-amazon.com/images/I/61fgc1OW1ZL._AC_SL1000_.jpg');
-    form.append('name', 'product1NFT');
-    form.append('description', 'product1 nft');
+    navigate("/verificationpage");
 
-    const options = {
-      method: 'POST',
-      headers: {
-        accept: 'application/json',
-        'X-API-Key': 'sk_live_7a24ca5d-7718-43b1-a77d-e520d851b091'
-      }
-    };
+    // const form = new FormData();
+    // form.append('chain', 'polygon');
+    // form.append('data', '[{"trait_type":"url","value":"https://www.amazon.com/All-new-Fire-HD-8-tablet/dp/B099Z8HLHT?ref_=Oct_DLandingS_D_4140c100_60"},{"trait_type":"name","value":"All-new Amazon Fire HD 8 tablet, 8” HD Display, 32 GB, 30% faster processor, designed for portable entertainment, (2022 release), Black"}, {"trait_type":"asin","value":"B09BG6BRQG"}]');
+    // form.append('imageUrl', 'https://m.media-amazon.com/images/I/61fgc1OW1ZL._AC_SL1000_.jpg');
+    // form.append('name', 'product1NFT');
+    // form.append('description', 'product1 nft');
 
-    options.body = form;
+    // const options = {
+    //   method: 'POST',
+    //   headers: {
+    //     accept: 'application/json',
+    //     'X-API-Key': 'sk_live_7a24ca5d-7718-43b1-a77d-e520d851b091'
+    //   }
+    // };
 
-    fetch('https://api.verbwire.com/v1/nft/mint/quickMintFromMetadata', options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
+    // options.body = form;
+
+    // fetch('https://api.verbwire.com/v1/nft/mint/quickMintFromMetadata', options)
+    //   .then(response => response.json())
+    //   .then(response => console.log(response))
+    //   .catch(err => console.error(err));
 
     
-    navigate("/verifiedpage");
-    console.log(yesVotes);
+    // navigate("/verifiedpage");
+    // console.log(yesVotes);
     yesVotes++;
-    console.log(yesVotes);
+    // console.log(yesVotes);
   }
 
   function votedNo() {
+
+    navigate("/verificationpage");
   
-    const form = new FormData();
-    form.append('chain', 'polygon');
-    form.append('data', '[{"trait_type":"url","value":"https://www.amazon.com/All-new-Fire-HD-8-tablet/dp/B099Z8HLHT?ref_=Oct_DLandingS_D_4140c100_60"},{"trait_type":"name","value":"All-new Amazon Fire HD 8 tablet, 8” HD Display, 32 GB, 30% faster processor, designed for portable entertainment, (2022 release), Black"}, {"trait_type":"asin","value":"B09BG6BRQG"}]');
-    form.append('imageUrl', 'https://m.media-amazon.com/images/I/61fgc1OW1ZL._AC_SL1000_.jpg');
-    form.append('name', 'product1NFT');
-    form.append('description', 'product1 nft');
+    // const form = new FormData();
+    // form.append('chain', 'polygon');
+    // form.append('data', '[{"trait_type":"url","value":"https://www.amazon.com/All-new-Fire-HD-8-tablet/dp/B099Z8HLHT?ref_=Oct_DLandingS_D_4140c100_60"},{"trait_type":"name","value":"All-new Amazon Fire HD 8 tablet, 8” HD Display, 32 GB, 30% faster processor, designed for portable entertainment, (2022 release), Black"}, {"trait_type":"asin","value":"B09BG6BRQG"}]');
+    // form.append('imageUrl', 'https://m.media-amazon.com/images/I/61fgc1OW1ZL._AC_SL1000_.jpg');
+    // form.append('name', 'product1NFT');
+    // form.append('description', 'product1 nft');
 
-    const options = {
-      method: 'POST',
-      headers: {
-        accept: 'application/json',
-        'X-API-Key': 'sk_live_7a24ca5d-7718-43b1-a77d-e520d851b091'
-      }
-    };
+    // const options = {
+    //   method: 'POST',
+    //   headers: {
+    //     accept: 'application/json',
+    //     'X-API-Key': 'sk_live_7a24ca5d-7718-43b1-a77d-e520d851b091'
+    //   }
+    // };
 
-    options.body = form;
+    // options.body = form;
 
-    fetch('https://api.verbwire.com/v1/nft/mint/quickMintFromMetadata', options)
-      .then(response => response.json())
-      .then(response => console.log(response))
-      .catch(err => console.error(err));
+    // fetch('https://api.verbwire.com/v1/nft/mint/quickMintFromMetadata', options)
+    //   .then(response => response.json())
+    //   .then(response => console.log(response))
+    //   .catch(err => console.error(err));
 
     
-    navigate("/verifiedpage");
-    console.log(noVotes);
+    // navigate("/verifiedpage");
+    // console.log(noVotes);
     noVotes++;
-    console.log(noVotes);
+    // console.log(noVotes);
   }
  
   // prodArray = [
