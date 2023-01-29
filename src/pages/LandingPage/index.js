@@ -3,8 +3,88 @@ import React from "react";
 import { Text, Img, Button } from "components";
 import { useNavigate } from "react-router-dom";
 
-const LandingPagePage = () => {
+const LandingPagePage = () => { 
+
+  var yesVotes = 0;
+  var noVotes = 0;
+  
   const navigate = useNavigate();
+
+  function votedYes() {
+  
+    const form = new FormData();
+    form.append('chain', 'polygon');
+    form.append('data', '[{"trait_type":"url","value":"https://www.amazon.com/All-new-Fire-HD-8-tablet/dp/B099Z8HLHT?ref_=Oct_DLandingS_D_4140c100_60"},{"trait_type":"name","value":"All-new Amazon Fire HD 8 tablet, 8” HD Display, 32 GB, 30% faster processor, designed for portable entertainment, (2022 release), Black"}, {"trait_type":"asin","value":"B09BG6BRQG"}]');
+    form.append('imageUrl', 'https://m.media-amazon.com/images/I/61fgc1OW1ZL._AC_SL1000_.jpg');
+    form.append('name', 'product1NFT');
+    form.append('description', 'product1 nft');
+
+    const options = {
+      method: 'POST',
+      headers: {
+        accept: 'application/json',
+        'X-API-Key': 'sk_live_7a24ca5d-7718-43b1-a77d-e520d851b091'
+      }
+    };
+
+    options.body = form;
+
+    fetch('https://api.verbwire.com/v1/nft/mint/quickMintFromMetadata', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+
+    
+    navigate("/verifiedpage");
+    console.log(yesVotes);
+    yesVotes++;
+    console.log(yesVotes);
+  }
+
+  function votedNo() {
+  
+    const form = new FormData();
+    form.append('chain', 'polygon');
+    form.append('data', '[{"trait_type":"url","value":"https://www.amazon.com/All-new-Fire-HD-8-tablet/dp/B099Z8HLHT?ref_=Oct_DLandingS_D_4140c100_60"},{"trait_type":"name","value":"All-new Amazon Fire HD 8 tablet, 8” HD Display, 32 GB, 30% faster processor, designed for portable entertainment, (2022 release), Black"}, {"trait_type":"asin","value":"B09BG6BRQG"}]');
+    form.append('imageUrl', 'https://m.media-amazon.com/images/I/61fgc1OW1ZL._AC_SL1000_.jpg');
+    form.append('name', 'product1NFT');
+    form.append('description', 'product1 nft');
+
+    const options = {
+      method: 'POST',
+      headers: {
+        accept: 'application/json',
+        'X-API-Key': 'sk_live_7a24ca5d-7718-43b1-a77d-e520d851b091'
+      }
+    };
+
+    options.body = form;
+
+    fetch('https://api.verbwire.com/v1/nft/mint/quickMintFromMetadata', options)
+      .then(response => response.json())
+      .then(response => console.log(response))
+      .catch(err => console.error(err));
+
+    
+    navigate("/verifiedpage");
+    console.log(noVotes);
+    noVotes++;
+    console.log(noVotes);
+  }
+ 
+  // prodArray = [
+  //   "product1.jpg",
+  //   "product2.jpg",
+  //   "product3.jpg",
+  //   "product4.jpg",
+  //   "product5.jpg"
+  // ]
+
+  // function products() {
+  //   var randNum = Math.floor(Math.random() * prodArray.length);
+  //   selectedProduct = prodArray[randNum];
+  //   return selectedProduct;
+  // }
 
   return (
     <>
@@ -44,7 +124,7 @@ const LandingPagePage = () => {
                   be on Amazon?”
                 </Text>
                 <Img
-                  src="images/img_image2.png"
+                  src="images/product1.jpg"
                   className="h-[348px] sm:h-[auto] mt-[75px] object-cover md:w-[100%] sm:w-[100%] w-[35%]"
                   alt="imageTwo"
                 />
@@ -60,14 +140,14 @@ const LandingPagePage = () => {
             <div className="flex sm:flex-col flex-row font-manrope sm:gap-[40px] gap-[88px] items-center justify-start md:ml-[0] sm:ml-[0] ml-[130px] mt-[28px] md:w-[100%] sm:w-[100%] w-[54%]">
               <Button
                 className="common-pointer cursor-pointer font-semibold min-w-[43%] text-[18px] text-center text-white_A700 w-[max-content]"
-                onClick={() => navigate("/confirmationpage")}
+                onClick={() => votedYes()}
                 size="sm"
               >
                 YES
               </Button>
               <Button
                 className="common-pointer cursor-pointer font-semibold min-w-[43%] text-[18px] text-center text-white_A700 w-[max-content]"
-                onClick={() => navigate("/confirmationpage")}
+                onClick={() => votedNo()}
                 size="sm"
               >
                 NO
