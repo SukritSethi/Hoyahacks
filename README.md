@@ -1,238 +1,73 @@
-# Design System
+## Inspiration
 
-All the design has been generated with [tailwindcss](https://tailwindcss.com/).
-Find all the theme related configuration inside tailwind.config.js
+Imagine a world where you have the power to shape the Amazon marketplace. Our app allows you to vote on different Amazon products, influencing what stays and what goes. No more tedious review reading, just a simple and easy way to make your voice heard. Join us in revolutionizing the way we shop online and creating a marketplace that genuinely cares about the needs of the people.
 
-# Design System
 
-All the designs have been generated with [Tailwind CSS](https://tailwindcss.com/).
-Find all the theme related configurations inside tailwind.config.js
+## What it does
 
-# Running the storybook
+Our app allows users to vote on different Amazon products. By simplifying the process of shopping on Amazon, it eliminates the need for tedious review reading. The app's voting system allows users to vote "yes" or "no" on specific products. If a product receives enough "yes" votes, it will stay on Amazon, and if it receives enough "no" votes, it will be removed from the platform. This innovative approach to online shopping gives users the power to shape the Amazon marketplace and make it more user-friendly.
 
-We have detected common components and have generated possible variants of it. To check the documentation of generated common components by integrating storybook, please follow the below steps:
-
-## Install and Initializes
-
-     npx storybook init
-
-## Run the Storybook
-
-      npm run storybook
-
-<div>
-  <h1 align="center">Getting Started with React Figma Web 🚀 </h1>
-  <strong>
-    Generated with ❤️ from DhiWise
-  </strong>
-  <p>
-    This is the documentation of React Figma Web.
-    It contains all the information you need to get started with
-    and make changes to your App
-  </p>
-</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## How we built it
 
-This project is integrated with a [Tailwind CSS](https://tailwindcss.com/) setup, a new utility-first CSS framework, in an CRA environment. You can read more over on [Getting Started with Tailwind](https://tailwindcss.com/docs/installation).
+We built Votr using a combination of Figma for designing the user interface, JavaScript and React for building the front end, and Verbiwire API for integrating with Amazon's database of products. The app uses tailwind to style the pages in a visually appealing way. 
 
-## Table of Contents
+The app's voting system was built using JavaScript, which allows users to vote "yes" or "no" on specific products. The voting data is then sent to the backend, which is processed and stored in a database. The backend also integrates with the **Verbiwire** API to retrieve information about the products from Amazon's database.
 
-- [System Requirements](#system-requirements)
-- [Setup Feedback](#setup)
-- [Install Dependencies](#install-dependencies)
-- [.env file](#env-file)
-- [Running the App](#running-the-app)
-- [Folder Structure](#folder-structure)
-- [Available Scripts](#available-scripts)
-  - [npm start](#npm-start)
-  - [npm test](#npm-test)
-  - [npm run build](#npm-run-build)
-  - [npm run eject](#npm-run-eject)
-- [Changing the Page `<title>`](#changing-the-page-title)
-- [Installing a Dependency](#installing-a-dependency)
-- [CRA User Guide](#cra-user-guide)
-- [How to Update to New Versions?](#how-to-update-to-new-versions)
-- [What’s Included?](#whats-included)
+Due to the time constraints, we weren't able to achieve the ideal project we wanted. As of now, the project allows voting only over 1 product, whose data we fetch directly from Amazon's database. 
 
-## System Requirement
+An **NFT** is generated using a verbwire API every time a user confirms their vote(where they are sent to using **react-router**)
 
-- [git](https://git-scm.com/) - v2.13 or greater
-- [NodeJS](https://nodejs.org/en/) - `12 || 14 `
-- [npm](https://www.npmjs.com/) - v6 or greater
+_The product was chosen at random. We apologize if this hurt any sentiments_
 
-## Setup
+<img src="http://g.recordit.co/8tqRTYkta6.gif" width=100><br>
 
-Setup your project by running the following commands:
+<img src="http://g.recordit.co/XqYFxKPwDG.gif" width=100><br>
 
-## Install Dependencies
+## Challenges we ran into
 
-    npm install
+While building Votr, we ran into several challenges. One of the main challenges was integrating with the Verbiwire API. The API had a complex structure and required a lot of testing and debugging to ensure we could retrieve the correct data from Amazon's database.
 
-## .env file
+Another challenge we faced was ensuring that the voting system was accurate and reliable. We had to carefully design and test the system to ensure that votes were counted correctly and that products were added or removed from the platform based on the number of votes received.
 
-This file contains various environment variables that you can configure.
+Additionally, we faced challenges in creating an intuitive and visually appealing user interface that would make it easy for users to navigate and use the app. We had to iterate on the design and user flow multiple times to ensure that it was user-friendly and easy to understand.
 
-**PORT** - Port to run your frontend on \
-**REACT_APP_GOOGLE_CLIENT_ID** - (Optional) Your Google Client ID
+Lastly, we faced challenges in securing user data and ensuring that the app was accessible to all users as per the security standards. For that, we have deployed the website using **Vercel** and attained a domain name from **domain.com**. Currently, you can access the project from **_votr.tech_**.
 
-## Running the App
+Despite these challenges, we overcame them through careful planning, testing, and iteration. We are proud of the final product and believe it provides a valuable and user-friendly solution for online shoppers.
 
-    npm start
+While our product might not be entirely foolproof or even completed as a market ready product, we are proud of the fact that we three were able to learn and implement a project in web3 just over a weekend, thanks to the **verbwire API** and **banks#8744** for guiding us.
 
-## Folder Structure
+## Accomplishments that we're proud of
 
-After creation, your project should look like this:
+We are incredibly proud of the accomplishments we achieved while building Votr. One of the main accomplishments we're proud of is the successful integration with the Verbiwire API. This allowed us to retrieve a wide range of product data from Amazon's database and would allow our users to vote on many products.
 
-```
-.
-├── package.json
-├── package-lock.json
-├── postcss.config.js
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
-│   ├── manifest.json
-│   └── robots.txt
-├── README.md
-├── src
-│   ├── App.js
-│   ├── assets
-│   │   ├── fonts ---------- Project fonts
-│   │   └── images --------- All Project Images
-│   ├── components --------- UI and Detected Common Components
-│   ├── constants ---------- Project constants, eg: string consts
-│   ├── hooks -------------- Helpful Hooks
-│   ├── index.js
-│   ├── pages -------------- All route pages
-│   ├── Routes.js ---------- Routing
-│   ├── styles
-│   │   ├── index.css ------ Other Global Styles
-│   │   └── tailwind.css --- Default Tailwind modules
-│   └── util
-│       └── index.js ------- Helpful utils
-└── tailwind.config.js ----- Entire theme config, colors, fonts etc.
-```
+We are also proud of the user interface we created for the app. It's intuitive, visually appealing, and easy to navigate, which makes it user-friendly and easy to understand.
 
-For the project to build, **these files must exist with exact filenames**:
+Lastly, we are proud of the security measures we took to protect user data and ensure the app is accessible to all users. We took extra care to ensure the data was saved and the app was accessible to users across the globe, by hosting the application.
 
-- `public/index.html` is the page template;
-- `src/index.js` is the JavaScript entry point.
+Overall, these accomplishments result from our hard work and dedication, and we are excited to see how our app will be used and enjoyed by our users.
 
-You may create subdirectories inside src. For faster rebuilds, only files inside src are processed by Webpack.
-You need to put any JS and CSS files inside src, otherwise Webpack won’t see them.
+## What we learned
 
-Only files inside public can be used from public/index.html.
-Read instructions below for using assets from JavaScript and HTML.
+During the development, we learned a lot about various aspects of software development. One of the most important things we learned was the importance of effective communication and teamwork. We had to work closely with different team members, each with their skills and expertise, and we needed to communicate effectively to achieve our common goal.
 
-You can, however, create more top-level directories.
-They will not be included in the production build so you can use them for things like documentation.
+We also learned a lot about the technologies we used to build the app. For example, we gained a deeper understanding of using the Verbiwire API, which allowed us to explore web3 and build a blockchain based project within such a small timeframe. 
 
-## Available Scripts
+We also learned much about React, a powerful JavaScript library for building user interfaces. We also learned about Figma, the design/prototyping tool we used, and we saw how it could collaborate with other team members and create visually appealing designs.
 
-In the project directory, you can run:
+We also learned about the importance of user experience and accessibility. We realized that it's essential to make an app functional and easy to use, and accessible to a wide range of users. We took extra care to ensure that the app was accessible to users with different abilities and that the interface was intuitive and easy to understand. Being non-native speakers, we ensured that our words were simple, straight forward and easy to understand.
 
-### `npm start`
+Finally, we learned about the importance of security and data protection(**SSL certification**). We ensured that the app was built with security in mind and that user data was always protected.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Overall, working on Votr was a great learning experience, and we are excited to continue learning and growing as software developers.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## What's next for Votr
 
-### `npm test`
+Initially, we aim to complete the project as per our designs and integrate metamask signatures. Further on, we aim to make custom/uniquely-images for every voting.
 
-Launches the test runner in the interactive watch mode.<br>
+"What's next for us" is to continue to improve and expand upon our app. We aim to allow users to vote on Amazon products and integrate with other e-commerce platforms. Further on, the blockchain reassurance opens doors for VOTR to become a solution bigger than just an ecommerce.
 
-### `npm run build`
+VOTR would grow onto becoming a complete voting platform where the consumers, ranging from classroom teachers to government bodies, would be able to conduct polls and maintain an immutable voting record on the blockchain. 
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that DhiWise wouldn’t be useful if you can’t customize it when you are ready for it.
-
-## Syntax Highlighting in the Editor
-
-To configure the syntax highlighting in your favorite text editor, head to the [relevant Babel documentation page](https://babeljs.io/docs/editors) and follow the instructions. Some of the most popular editors are covered.
-
-## Displaying Lint Output in the Editor
-
-> Note: This feature is available with `react-scripts@0.2.0` and higher.<br>
-> It only works with npm 3 or higher.
-> Some editors, including Sublime Text, Atom, and Visual Studio Code, provide plugins for ESLint.
-
-They are not required for linting. You should see the linter output right in your terminal as well as the browser console. However, if you prefer the lint results to appear right in your editor, there are some extra steps you can take.
-
-You would need to install an ESLint plugin for your editor first. Then, add a file called `.eslintrc` to the project root:
-
-```js
-{
-  "extends": "react-app"
-}
-```
-
-Now your editor should report the linting warnings.
-
-Note that even if you edit your `.eslintrc` file further, these changes will **only affect the editor integration**. They won’t affect the terminal and in-browser lint output. This is because Create React App intentionally provides a minimal set of rules that find common mistakes.
-
-If you want to enforce a coding style for your project, consider using [Prettier](https://github.com/jlongster/prettier) instead of ESLint style rules.
-
-## Changing the Page `<title>`
-
-You can find the source HTML file in the `public` folder of the generated project. You may edit the `<title>` tag in it to change the title from “React App” to anything else.
-
-Note, that normally you wouldn’t edit files in the `public` folder very often. For example, adding a stylesheet is done without touching the HTML.
-
-If you need to dynamically update the page title based on the content, you can use the browser [`document.title`](https://developer.mozilla.org/en-US/docs/Web/API/Document/title) API. For more complex scenarios when you want to change the title from React components, you can use [React Helmet](https://github.com/nfl/react-helmet), a third party library.
-
-## Installing a Dependency
-
-The generated project includes React and ReactDOM as dependencies. It also includes a set of scripts used by Create React App as a development dependency. You may install other dependencies (for example, React Router) with `npm`:
-
-```sh
-npm install --save react-router
-```
-
-Alternatively you may use `yarn`:
-
-```sh
-yarn add react-router
-```
-
-This works for any library, not just `react-router`.
-
-## CRA User Guide
-
-You can find detailed instructions on using Create React App and many tips in [its documentation](https://facebook.github.io/create-react-app/).
-
-## How to Update to New Versions?
-
-Please refer to the [User Guide](https://facebook.github.io/create-react-app/docs/updating-to-new-releases) for this and other information.
-
-## What’s Included?
-
-Your environment will have everything you need to build a modern single-page React app:
-
-- React, JSX, ES6, TypeScript and Flow syntax support.
-- Language extras beyond ES6 like the object spread operator.
-- Autoprefixed CSS, so you don’t need `-webkit-` or other prefixes.
-- A fast interactive unit test runner with built-in support for coverage reporting.
-- A live development server that warns about common mistakes.
-- A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
-- An offline-first [service worker](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers) and a [web app manifest](https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/), meeting all the [Progressive Web App](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app) criteria. (_Note: Using the service worker is opt-in as of `react-scripts@2.0.0` and higher_)
-- Hassle-free updates for the above tools with a single dependency.
-
-The tradeoff is that **these tools are preconfigured to work in a specific way**. If your project needs more customization, you can ["eject"](https://facebook.github.io/create-react-app/docs/available-scripts#npm-run-eject) and customize it, but then you will need to maintain this configuration.
+With help from web3 contributors, such as Verbwire, VOTR might help the world get rid of rigged online voting systems and similar malpractices.
