@@ -1,6 +1,6 @@
 {
-  "name": "figma-react-boilerplate",
-  "version": "0.1.0",
+  "name": "votr",
+  "version": "1.1.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.15.1",
@@ -18,9 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+
   },
   "eslintConfig": {
     "extends": [
@@ -40,9 +38,5 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "autoprefixer": "10.4.2",
-    "postcss": "8.4.8",
-    "tailwindcss": "3.0.18"
-  }
+  
 }
